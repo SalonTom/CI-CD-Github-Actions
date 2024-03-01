@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        woirking-directory: server
+        working-directory: server
     
     steps:
       - name: Checkout code
