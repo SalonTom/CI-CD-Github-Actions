@@ -21,7 +21,7 @@ app.post('/double-auth', (req, res, next) => {
 });
 
 app.post('/login', (req, res, next) => {
-  if (!req.body || !req.body.password) {
+  if (!req.body || !req.body.mail || !req.body.password) {
     res.status(500).send('Incorrect login data was sent.')
   } else {
     const authCode = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
