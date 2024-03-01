@@ -10,7 +10,7 @@ let AUTH_SECRET = ""
 
 app.post('/double-auth', (req, res, next) => {
     if (!req.body.code) {
-      res.status(500).send({ message : 'No code was sent.'})
+      res.status(500).send('No code was sent.')
     }
 
     if (req.body.code === AUTH_SECRET) {
@@ -22,7 +22,7 @@ app.post('/double-auth', (req, res, next) => {
 
 app.post('/login', (req, res, next) => {
   if (!req.body || !req.body.mail || !req.body.password) {
-    res.status(500).send({ message : 'Incorrect login data was sent.'})
+    res.status(500).send('Incorrect login data was sent.')
   } else {
     const authCode = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
     AUTH_SECRET = authCode;
