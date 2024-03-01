@@ -1,32 +1,32 @@
 name: CI Training
 
 on:
-    push:
-        branches:
-            - main
-  
-    pull_request:
-        branches:
-            - main
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
 
 jobs:
-    client-test:
-        runs-on: ubuntu-latest
-        defaults:
-            run:
-                working-directory: client
+  client-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: client
 
-        steps:
-            - name: Checkout code
-                uses: actions/checkout@v4 # Allow workflow to access the code in the current repo
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Allow workflow to access the code in the current repo
 
-            - name: Use Node.js
-                uses: actions/setup-node@v4
-                with:
-                    node-version: 20
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-            - name: Install nodes modules
-                run: npm install
+      - name: Install nodes modules
+        run: npm install
 
-            # - name: Run e2e tests
-            #     run: npm run e2e
+      # - name: Run e2e tests
+      #     run: npm run e2e
