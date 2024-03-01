@@ -1,0 +1,100 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0 0;
+
+  background-color: #F5F5F5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#db-auth-container {
+  border-radius: 8px;
+
+  box-shadow: 4px 0px 24px 4px rgb(from rgb(174, 176, 207) r g b / 0.05);
+  
+  background-color: #FFFFFF;
+  
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: min-content;
+
+  color: rgb(1, 51, 89);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#db-auth-code-container {
+  display: flex;
+  max-width: fit-content;
+
+  gap: 12px;
+}
+
+input[id^="db-auth-code-input-"] {
+  border-radius: 8px;
+  width: 24px;
+  height: 32px;
+
+  margin: 0;
+
+  padding: 4px;
+  text-align: center;
+
+  background-color: #EFEFF1;
+  border: none;
+
+  font-weight: bold;
+  font-size: 16px;
+}
+
+input[id^="db-auth-code-input-"]:focus {
+  outline-color: rgb(146, 79, 249) !important;
+  outline-width: 1px;
+  background-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.buzz {
+  animation: buzz 0.5s;
+}
+
+@keyframes buzz {
+  0% {
+      transform: rotate(0);
+  }
+
+  25% {
+      transform: rotate(15deg);
+  }
+
+  50% {
+      transform: rotate(-15deg);
+  }
+
+  100% {
+      transform: rotate(0deg);
+  }
+}
