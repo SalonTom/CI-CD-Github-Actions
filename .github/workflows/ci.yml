@@ -16,16 +16,16 @@ jobs:
             run:
                 working-directory: client
 
-    steps:
-    - uses: actions/checkout@v4 # Allow workflow to access the code in the current repo
+        steps:
+        - uses: actions/checkout@v4 # Allow workflow to access the code in the current repo
 
-    - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-            node-version: 20
+        - name: Use Node.js
+            uses: actions/setup-node@v4
+            with:
+                node-version: 20
 
-    - name: Install nodes modules
-        run: npm install
+        - name: Install nodes modules
+            run: npm install
 
-    # - name: Run e2e tests
-    #     run: npm run e2e
+        # - name: Run e2e tests
+        #     run: npm run e2e
